@@ -14,6 +14,8 @@ Planned Features:
     <li>Speaker Profiles</li>
     <li>Location Map</li>
     <li>Submit Feedback</li>
+    <li>Streaming Video</li>
+    <li>IRC chat</li>
   </ul>
   
   backend:
