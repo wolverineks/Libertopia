@@ -7,15 +7,19 @@ This is a schedule web app for Libertopia 2015.
 Planned Features:
 
   frontend:
-    Master Schedule
-    Personalized Schedule
-    Talk Descriptions
-    Speaker Profiles
-    Location Map
-    Submit Feedback
+  <ul>
+    <li>Master Schedule</li>
+    <li>Personalized Schedule</li>
+    <li>Talk Descriptions</li>
+    <li>Speaker Profiles</li>
+    <li>Location Map</li>
+    <li>Submit Feedback</li>
+  </ul>
+  
   backend:
-    Allow pull updates for master schedule/descriptions/profiles
-
+  <ul>
+    <li>Allow pull updates for master schedule/descriptions/profiles</li>
+  </ul>
   
 Changelog:
 
