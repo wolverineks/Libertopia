@@ -22,13 +22,13 @@ Planned Features:
   <ul>
     <li>Allow pull updates for master schedule/descriptions/profiles</li>
   </ul>
-  
-Changelog:
-
-ver. 0.2
-  Master Schedule contains 2 pages, swiping between pages, changing "favorites stars".
-ver. 0.1
-  Master Schedule Template started but incomplete (HTML only)
-
+ 
+<dl> 
+  <dh>Changelog:</dh>
+    <dt>ver. 0.2</dt>
+      <dd>Master Schedule contains 2 pages, swiping between pages, changing "favorites stars".</dd>
+    <dt>ver. 0.1</dt>
+      <dd>Master Schedule Template started but incomplete (HTML only)</dt>
+</dl>
   
 bitcoin:16LKbhimLd8zSPijjnUMe5SafoqwBhZjfE
