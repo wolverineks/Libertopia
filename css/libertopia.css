@@ -10,9 +10,9 @@ height: 100%;
 width: 100%;
 }
 
-
 .header {
 	position: fixed;
+/*	position: relative;*/
 	top: 0em;
 	left: 0em;
 	right: 0em;
@@ -21,9 +21,9 @@ width: 100%;
 	height: 3.5em;
 	width: 100%;
 	background-color: #465ACF;
+	text-align: center;
 }
 
-@media (orientation:landscape){
 h1 {
 	margin: 0em;
 	color: white;
@@ -32,17 +32,21 @@ h1 {
 	font-size: 2em;
 	font-style: italic;
 }
+
+.roomContainer {
+	position: fixed;
+	top: 4.5em;
+	left: 0;
+	width: 1.5em;
+	height: 100%;
+	background-color: black;
 }
 
-@media (orientation:portrait){
-h1 {
-	margin: 0em;
-	color: white;
+.room {
+	padding-top: 3em;
+	height: 22%;
 	text-align: center;
-	font-family: tahoma;
-	font-size: 2em;
-	font-style: italic;
-}
+	font-size: 1em;
 }
 
 .main {
@@ -51,11 +55,31 @@ h1 {
 	left: 0em;
 	width: 100%;
 	height: 100%;
+	padding: 0;
+	margin: 0;
+	transition: left .5s
+}
+
+.page1 {
+	left: 0%;
+}
+
+.page2 {
+	left: -100%;
+}
+
+.spacer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 1.5em;
+	background-color: black;
 }
 
 .timeBar {
-	position: fixed;
-	top: 3.5em;
+	position: absolute;
+	top: 0em;
 	left: 0em;
 	width: 100%;
 	background-color: black;
@@ -67,43 +91,41 @@ h1 {
 
 .timeLabel {
 	text-align: center;
-	margin-bottom: auto;
-	margin-top: auto;
 	font-size: .8em;
-}
+}	
 
-.roomContainer {
-	position: fixed;
-	top: 4.5em;
-	width: 1.5em;
+.container {
+	margin-top: 1.05em; /*avoids timeBar and adds top border effect*/
 	height: 100%;
-	background-color: black;
 }
-
-.room {
-	padding-top: 3.75em;
-/*	height: 8.5em;*/
-	height: 22.1%;
-	text-align: center;
-	font-size: 1em;
-}
-
-/*.next {
-	transform: 3dtranslate(100%, 0, 0);
-}*/
 
 .talkBoxContainer {
-	float: left;
-	margin-top: 1em;
-	margin-left: 1.5em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 0em;
+	padding-top: 0em;
 	height: 100%;
 	width: 100%;
 	background-color: grey;
 }
 
+#talkBoxContainer1 {
+	position: absolute;
+	top: 0;
+	padding-left: 1.5em;
+}
+
+#talkBoxContainer2 {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	padding-left: 1.5em;
+}
+
 @media (orientation: landscape){
 .talkBox {
-/*	height: 8.5em;*/
+	position: relative;
 	height: 22%;
 	width: 33%;
 	margin: .05em; /*creates border effect */
@@ -114,7 +136,7 @@ h1 {
 
 @media (orientation: portrait){
 .talkBox {
-/*	height: 8.5em;*/
+	position: relative;
 	height: 22%;
 	width: 100%;
 	margin: .05em; /*creates border effect */
@@ -123,78 +145,50 @@ h1 {
 }
 }
 
-
 .talkTitle {
 	color: white/*#B7B7B7*/;
 	text-align: left;
-	float: left;
+	position: absolute;
+	top: .5em;
+	left: .5em;
 }
 
 @media (orientation: landscape){
 .talkDescription {
 	display: none;
-/*	color: gray;
-	clear: both;
-	margin-right: 2em;*/
+	color: whitesmoke;
+	padding-right: 3em;
 }
 }
 
 @media (orientation: portrait){
 .talkDescription {
-	color: gray;
-	clear: both;
-	margin-right: 2em;		
+	position: absolute;
+	top: 2em;
+	color: grey;
+	padding-right: 3em;
 }
 }	
 	
 @media (orientation: landscape) {
 .talkTime {
+	position: absolute;
+	bottom: .5em;
+	left: .5em;
 	color: white;
-	vertical-align: bottom;
-	margin-top: .5em;
-	margin-right: 2em;
-	float: left;
 	text-align: left;
-	clear: both;
 }
 }	
 	
 @media (orientation: portrait) {
 .talkTime {
+	position: absolute;
+	bottom: .5em;
+	left: .5em;
 	color: white;
-	vertical-align: bottom;
-	margin-top: 1.5em;
-	margin-right: 2em;
-	float: left;
 	text-align: left;
-	clear: both;
 }	
 }	
-		
-
-@media (orientation: landscape) {
-.talkSpeakers {
-	display: none;	
-	/*color: red;
-	vertical-align: bottom;
-	margin-top: 1.5em;
-	margin-right: 2em;
-	float: right;
-	text-align: right;*/	
-}
-}
-
-@media (orientation: portrait) {
-.talkSpeakers {
-	color: white;
-	vertical-align: bottom;
-	margin-top: 1.5em;
-	margin-right: 2em;
-	float: right;
-	text-align: right;
-	
-}
-}
 
 @media (orientation: landscape) {
 .favStar {
@@ -207,11 +201,10 @@ h1 {
 @media (orientation: portrait) {
 .favStar {
 	float: right;
-	margin-right: 2em;
+	margin-right: .5em;
 	height: 1.5em;
 }
 }
-
 
 p {
 	font-size: .75em;
@@ -226,12 +219,4 @@ h2 {
 	font-weight: bold;
 	padding-top: 0em;	
 	margin-top: 0em;
-/*	text-decoration: underline;*/
 }
-
-.next {
-padding-left: 100%;
-margin-left: 100%;
-}
-
-/*.line1 {
