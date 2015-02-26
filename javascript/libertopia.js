@@ -1,48 +1,95 @@
 function init() {
 
-var favStar1 = document.getElementById("favStar1");
+//swipe test area /////////////////////////////
 
-	favStar1.addEventListener('click', function() {
-	favStar1.setAttribute("src", "images/fav.png");
-	favStar2.setAttribute("src", "images/add-fav.png");
-	favStar3.setAttribute("src", "images/add-fav.png");
-	favStar4.setAttribute("src", "images/add-fav.png");
-	}, false);
+  $( document ).on( "swipeleft swiperight", "", swipeHandler);
 
-var favStar2 = document.getElementById("favStar2");
+  function swipeHandler( e ){
+  	if ( e.type === "swipeleft"  ) {
+		var main = document.getElementById("main");
+		main.setAttribute("class", "main page2");
 		
-	favStar2.addEventListener('click', function() { 
-	favStar1.setAttribute("src", "images/add-fav.png");
-	favStar2.setAttribute("src", "images/fav.png");
-	favStar3.setAttribute("src", "images/add-fav.png");
-	favStar4.setAttribute("src", "images/add-fav.png");
-	}, false);
-
-var favStar3 = document.getElementById("favStar3");
+	} else if ( e.type === "swiperight" ) {
+		var main = document.getElementById("main");
+		main.setAttribute("class", "main page1");
 		
-	favStar3.addEventListener('click', function() { 
-	favStar1.setAttribute("src", "images/add-fav.png");
-	favStar2.setAttribute("src", "images/add-fav.png");
-	favStar3.setAttribute("src", "images/fav.png");
-	favStar4.setAttribute("src", "images/add-fav.png");
+	};
+};
+
+//Select lecture for personalized schedule
+var favStar11 = document.getElementById("favStar11");
+
+	favStar11.addEventListener('click', function() {
+		favStar11.setAttribute("src", "images/fav.png");
+		favStar12.setAttribute("src", "images/add-fav.png");
+		favStar13.setAttribute("src", "images/add-fav.png");
+		favStar14.setAttribute("src", "images/add-fav.png");
 	}, false);
 
-var favStar4 = document.getElementById("favStar4");
+var favStar12 = document.getElementById("favStar12");
+		
+	favStar12.addEventListener('click', function() { 
+		favStar11.setAttribute("src", "images/add-fav.png");
+		favStar12.setAttribute("src", "images/fav.png");
+		favStar13.setAttribute("src", "images/add-fav.png");
+		favStar14.setAttribute("src", "images/add-fav.png");
+	}, false);
+
+var favStar13 = document.getElementById("favStar13");
+		
+	favStar13.addEventListener('click', function() { 
+		favStar11.setAttribute("src", "images/add-fav.png");
+		favStar12.setAttribute("src", "images/add-fav.png");
+		favStar13.setAttribute("src", "images/fav.png");
+		favStar14.setAttribute("src", "images/add-fav.png");
+	}, false);
+
+var favStar14 = document.getElementById("favStar14");
 	
-	favStar4.addEventListener('click', function() { 
-	favStar1.setAttribute("src", "images/add-fav.png");
-	favStar2.setAttribute("src", "images/add-fav.png");
-	favStar3.setAttribute("src", "images/add-fav.png");
-	favStar4.setAttribute("src", "images/fav.png");
+	favStar14.addEventListener('click', function() { 
+		favStar11.setAttribute("src", "images/add-fav.png");
+		favStar12.setAttribute("src", "images/add-fav.png");
+		favStar13.setAttribute("src", "images/add-fav.png");
+		favStar14.setAttribute("src", "images/fav.png");
+	}, false);
+	
+
+
+var favStar21 = document.getElementById("favStar21");
+
+	favStar21.addEventListener('click', function() {
+		favStar21.setAttribute("src", "images/fav.png");
+		favStar22.setAttribute("src", "images/add-fav.png");
+		favStar23.setAttribute("src", "images/add-fav.png");
+		favStar24.setAttribute("src", "images/add-fav.png");
 	}, false);
 
+var favStar22 = document.getElementById("favStar22");
+		
+	favStar22.addEventListener('click', function() { 
+		favStar21.setAttribute("src", "images/add-fav.png");
+		favStar22.setAttribute("src", "images/fav.png");
+		favStar23.setAttribute("src", "images/add-fav.png");
+		favStar24.setAttribute("src", "images/add-fav.png");
+	}, false);
 
+var favStar23 = document.getElementById("favStar23");
+		
+	favStar23.addEventListener('click', function() { 
+		favStar21.setAttribute("src", "images/add-fav.png");
+		favStar22.setAttribute("src", "images/add-fav.png");
+		favStar23.setAttribute("src", "images/fav.png");
+		favStar24.setAttribute("src", "images/add-fav.png");
+	}, false);
 
-
-
-
-
-
-
+var favStar24 = document.getElementById("favStar24");
+	
+	favStar24.addEventListener('click', function() { 
+		favStar21.setAttribute("src", "images/add-fav.png");
+		favStar22.setAttribute("src", "images/add-fav.png");
+		favStar23.setAttribute("src", "images/add-fav.png");
+		favStar24.setAttribute("src", "images/fav.png");
+	}, false);
+	
 };
 window.onload = init;
