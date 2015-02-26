@@ -25,6 +25,8 @@ Planned Features:
   
 Changelog:
 
+ver. 0.2
+  Master Schedule contains 2 pages, swiping between pages, changing "favorites stars".
 ver. 0.1
   Master Schedule Template started but incomplete (HTML only)
 
