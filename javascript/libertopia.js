@@ -31,6 +31,16 @@ function init() {
          }
      });   
 
+//menu click
+
+var menuButton = document.getElementById("menuButton");
+
+	menuButton.addEventListener('click', function() {
+         	var menu = document.getElementById("menu");
+            menu.setAttribute("class", "menu open");
+         }, false);
+	
+
 //Select lecture for personalized schedule
 var favStar11 = document.getElementById("favStar11");
 
