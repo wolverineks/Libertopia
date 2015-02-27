@@ -20,17 +20,36 @@ width: 100%;
 	padding-top: .3em;
 	height: 3.5em;
 	width: 100%;
-	background-color: #465ACF;
+/*	background-color: #465ACF;*/
+/*	background-color: #F2D73B;*/
+	background-color: #FFFF75;
 	text-align: center;
 }
 
 h1 {
 	margin: 0em;
-	color: white;
+	padding-left: 2em;
+	padding-top: .3em;
+/*	color: white;*/
+	color: black;
 	text-align: center;
 	font-family: tahoma;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-style: italic;
+}
+
+.icon {
+	position: fixed;
+	left: 2em;
+	top: .2em;
+	height: 3em;
+}
+
+.menu {
+	position: fixed;
+	left: -.5em;
+	top: .7em;
+	height: 2em;
 }
 
 .roomContainer {
@@ -57,7 +76,7 @@ h1 {
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	transition: left .5s
+	transition: left .5s;
 }
 
 .page1 {
@@ -219,4 +238,34 @@ h2 {
 	font-weight: bold;
 	padding-top: 0em;	
 	margin-top: 0em;
+}
+
+h3 {
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	padding-top: 0em;	
+	margin-top: 0em;
+}
+
+ul {
+	color: white;
+}
+
+.menu {
+	position: absolute;
+	top: 0;	
+	left: -18em;
+	height: 100%;
+	width: 18em;
+	background-color: black;
+	transition: left .5s;
+}
+
+.open {
+		left: 0em;
+}
+
+.closed {
+		left: -18em;
 }
