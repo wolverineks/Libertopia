@@ -2,7 +2,7 @@ function init() {
 
 //swipe test area /////////////////////////////
 
-  $( document ).on( "swipeleft swiperight", "", swipeHandler);
+  $( ".container" ).on( "swipeleft swiperight", "", swipeHandler);
 
   function swipeHandler( e ){
   	if ( e.type === "swipeleft"  ) {
@@ -15,6 +15,21 @@ function init() {
 		
 	};
 };
+
+
+ $( ".roomContainer" ).on( "swipeleft swiperight", "", function( e ) {
+         if ( e.type === "swiperight"  ) {
+         	var menu = document.getElementById("menu");
+            menu.setAttribute("class", "menu open");
+         }
+     });
+     
+ $( ".menu" ).on( "swipeleft swiperight", "", function( e ) {
+         if ( e.type === "swipeleft"  ) {
+         	var menu = document.getElementById("menu");
+            menu.setAttribute("class", "menu closed");
+         }
+     });   
 
 //Select lecture for personalized schedule
 var favStar11 = document.getElementById("favStar11");
