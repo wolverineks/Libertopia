@@ -46,7 +46,7 @@ p {
 	padding: 0em;
 }
 
-/*---------------------------------------------------------------*/
+/*-----------------------header----------------------------------------*/
 
 .header {
 	position: fixed;
@@ -81,35 +81,43 @@ p {
 	display: none;
 }
 
-/*---------------------------------------------------------------*/
+/*---------------------------schedule------------------------------------*/
 
-.main {
-	position: fixed;
+#schedule {
+	transition: left .5s;
+	transition: opacity .5s;
+}
+
+.panel {
 	top: 3.5em;
+	position: fixed;
 	left: 0em;
 	width: 100%;
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	transition: left .5s;
+	transition: opacity;
 }
+
 
 /*---------------------------------------------------------------*/
 
-.roomContainer {
+.sideBar {
 	position: fixed;
 	top: 4.5em;
 	left: 0;
 	width: 1.5em;
 	height: 100%;
-	background-color: black;
+	background-color: grey
 }
 
 .room {
+	margin-top: .05em;
 	padding-top: 3em;
 	height: 22%;
 	text-align: center;
 	font-size: 1em;
+	background-color: black;
 }
 
 /*---------------------------------------------------------------*/
@@ -264,6 +272,97 @@ p {
 	margin-right: .5em;
 	height: 1.5em;
 }
+}
+
+/*----------------------mySchedule-----------------------------------------*/
+
+#mySchedule {
+	transition: opacity .5s;
+}
+
+.myScheduleContainer {
+
+
+}
+
+.dayBar {
+	position: absolute;
+	top: 0em;
+	left: 0em;
+	width: 100%;
+	background-color: black;
+	height: 1em;
+	margin: 0em;
+	border: 0em;
+	padding: 0em;
+}
+
+.dayLabel {
+	text-align: center;
+	font-size: .8em;
+}	
+
+.sideTimeBox {
+	width: 100%;
+	height: 7%;
+	margin-top: .05em;
+	padding-right: .3em;
+	background-color: black;
+}
+
+.sideTimeLabel {
+	text-align: right;
+	font-size: .6em;
+}
+
+
+/*---------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------speakers---------------------------------------*/
+
+#speakers {
+	transition: opacity .5s;
+}
+
+
+/*---------------------------talks------------------------------------*/
+
+#talks {
+	transition: opacity .5s;
+}
+
+
+/*--------------------------map-------------------------------------*/
+
+#map {
+	transition: opacity .5s;
+
+}
+
+/*---------------------------feedback------------------------------------*/
+
+#feedback {
+	transition: opacity .5s;
+}
+
+/*---------------------------------------------------------------*/
+
+.fadeOut {
+	opacity: 0;
+}
+
+.fadeIn {
+	opacity: 1;
 }
 
 /*---------------------------------------------------------------*/
