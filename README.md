@@ -16,6 +16,7 @@ Planned Features:
     <li>Submit Feedback</li>
     <li>Streaming Video</li>
     <li>IRC chat</li>
+    <li>Reddit Style Chat with Speakers</li>
   </ul>
   
   backend:
