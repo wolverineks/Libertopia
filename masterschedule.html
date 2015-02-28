@@ -24,12 +24,7 @@
 	</div>	
 	
 	<div>
-		<h1 id="scheduleTitle">SCHEDULE</h1>
-		<h1 id="myScheduleTitle" class="hidden">MY SCHEDULE</h1>
-		<h1 id="speakersTitle" class="hidden">SPEAKERS</h1>
-		<h1 id="talksTitle" class="hidden">TALKS</h1>
-		<h1 id="mapTitle" class="hidden">MAP</h1>
-		<h1 id="feedbackTitle" class="hidden">FEEDBACK</h1>
+		<h1 class="pageTitle" id="pageTitle">SCHEDULE</h1>
 	</div>
 	
 	<div>
@@ -38,7 +33,7 @@
 
 </div>
 
-<div class="main" id="main">
+<div class="panel" id="schedule">
 
 	<div class="talkBoxContainer" id="talkBoxContainer2">
 
@@ -49,6 +44,7 @@
 		<div class="container" id="container">
 		
 			<div class="talkBox" id="talkBox1">
+			
 				<div class="talkTitle">
 					<h2>Page02</h2>
 				</div>
@@ -68,6 +64,7 @@
 			</div>
 			
 			<div class="talkBox" id="talkBox2">
+			
 				<div class="talkTitle">
 					<h2>Alexandra Goldburt</h2>
 				</div>
@@ -222,7 +219,7 @@
 		
 	</div>
 	
-	<div class="roomContainer" id="roomContainer">
+	<div class="sideBar" id="roomContainer">
 		
 		<div class="room">
 			<p>1</p>	
@@ -240,51 +237,142 @@
 			<p>4</p>	
 		</div>	
 	</div>
+		
+</div>
 
-	<div class="menuContainer" id="menuContainer">
+<div class="panel hidden" id="mySchedule">
 
-		<div class="menu menuClose" id="menu">
-			<ul>
-				<li id="menuOptionSchedule">
-					<div class="li">
-						<img src="images/schedule.png" alt="Schedule" class="menuIcon">
-						<p class="menuOptions">Schedule</p>
-					</div>
-				</li>		
-				<li id="menuOptionMySchedule">
-					<div class="li">
-						<img src="images/mySchedule.png" alt="My Schedule" class="menuIcon">				
-						<p class="menuOptions">My Schedule</p>
-					</div>
-				</li>		
-				<li id="menuOptionSpeakers">
-					<div class="li">
-						<img src="images/speakers.png" alt="Speakers" class="menuIcon">
-						<p class="menuOptions">Speakers</p>
-					</div>
-				</li>		
-				<li id="menuOptionTalks">
-					<div class="li" id="menuOptionTalks">
-						<img src="images/talks.png" alt="Talks" class="menuIcon">
-						<p class="menuOptions">Talks</p>
-					</div>
-				</li>		
-				<li id="menuOptionMap">
-					<div class="li">
-						<img src="images/map.png" alt="Map" class="menuIcon">
-						<p class="menuOptions">Map</p>
-					</div>
-				</li>
-				<li id="menuOptionFeedback">
-					<div class="li">
-						<img src="images/feedback.png" alt="Feedback" class="menuIcon">
-						<p class="menuOptions">Feedback</p>
-					</div>
-				</li>		
-			</ul>	
+	<div id="day3">
+		
+		<div>
+			<p class="dayLabel" id="11/05/2015">11/05/2015</p>			
 		</div>
+	
 	</div>
 	
+	<div id="day2">
+
+		<div>
+			<p class="dayLabel" id="11/04/2015">11/04/2015</p>			
+		</div>
+
+	</div>
+
+	<div id="day1">
+	
+		<div class="dayBar">
+			<p class="dayLabel" id="11/03/2015">11/03/2015</p>			
+		</div>
+		
+		<div class="container" id="myScheduleContainer">
+			
+		</div>
+		
+	</div>
+	
+	<div class="sideBar" id="sideTimeBar">
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">7AM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">8AM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">9AM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">10AM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">11AM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel"12PM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">1PM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">2PM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">3PM</p>
+		</div>		
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">4PM</p>
+		</div>		
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">5PM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel">6PM</p>
+		</div>
+		<div class="sideTimeBox">
+			<p class="sideTimeLabel"7PM</p>
+		</div>
+	</div>
+		
+	
+</div>
+	
+<div class="panel hidden" id="speakers">
+
+</div>
+
+<div class="panel hidden" id="talks">
+
+</div>
+
+<div class="panel hidden" id="map">
+
+</div>
+
+<div class="panel hidden" id="feedback">
+
+</div>
+	
+<div class="menuContainer" id="menuContainer">
+
+	<div class="menu menuClose" id="menu">
+		<ul>
+			<li id="menuOptionSchedule">
+				<div class="li">
+					<img src="images/schedule.png" alt="Schedule" class="menuIcon">
+					<p class="menuOptions">Schedule</p>
+				</div>
+			</li>		
+			<li id="menuOptionMySchedule">
+				<div class="li">
+					<img src="images/mySchedule.png" alt="My Schedule" class="menuIcon">				
+					<p class="menuOptions">My Schedule</p>
+				</div>
+			</li>		
+			<li id="menuOptionSpeakers">
+				<div class="li">
+					<img src="images/speakers.png" alt="Speakers" class="menuIcon">
+					<p class="menuOptions">Speakers</p>
+				</div>
+			</li>		
+			<li id="menuOptionTalks">
+				<div class="li" id="menuOptionTalks">
+					<img src="images/talks.png" alt="Talks" class="menuIcon">
+					<p class="menuOptions">Talks</p>
+				</div>
+			</li>		
+			<li id="menuOptionMap">
+				<div class="li">
+					<img src="images/map.png" alt="Map" class="menuIcon">
+					<p class="menuOptions">Map</p>
+				</div>
+			</li>
+			<li id="menuOptionFeedback">
+				<div class="li">
+					<img src="images/feedback.png" alt="Feedback" class="menuIcon">
+					<p class="menuOptions">Feedback</p>
+				</div>
+			</li>		
+		</ul>	
+	</div>
 </div>
 	
 <script src="javascript/jquery-1.11.2.min.js"></script>
