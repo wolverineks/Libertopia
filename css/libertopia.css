@@ -10,6 +10,44 @@ height: 100%;
 width: 100%;
 }
 
+h1 {
+	margin: 0em;
+	padding-left: 0em;
+	padding-top: .3em;
+	color: black;
+	text-align: center;
+	font-family: tahoma;
+	font-size: 1.5em;
+	font-style: italic;
+}
+
+h2 {
+
+	font-size: 1em;
+	font-weight: bold;
+	padding-top: 0em;	
+	margin-top: 0em;
+}
+
+h3 {
+	padding-left: 1em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+p {
+	font-size: .75em;
+	color: white;
+	margin: 0em;
+	border: 0px;
+	padding: 0em;
+}
+
+/*---------------------------------------------------------------*/
+
 .header {
 	position: fixed;
 /*	position: relative;*/
@@ -20,22 +58,16 @@ width: 100%;
 	padding-top: .3em;
 	height: 3.5em;
 	width: 100%;
-/*	background-color: #465ACF;*/
-/*	background-color: #F2D73B;*/
 	background-color: #FFFF75;
 	text-align: center;
 }
 
-h1 {
-	margin: 0em;
-	padding-left: 2em;
-	padding-top: .3em;
-/*	color: white;*/
-	color: black;
-	text-align: center;
-	font-family: tahoma;
-	font-size: 1.5em;
-	font-style: italic;
+.menuButton {
+	position: fixed;
+	left: -.5em;
+	top: .7em;
+	height: 2em;
+	transition: left .5s;
 }
 
 .icon {
@@ -45,12 +77,24 @@ h1 {
 	height: 3em;
 }
 
-.menu {
-	position: fixed;
-	left: -.5em;
-	top: .7em;
-	height: 2em;
+.hidden {
+	display: none;
 }
+
+/*---------------------------------------------------------------*/
+
+.main {
+	position: fixed;
+	top: 3.5em;
+	left: 0em;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	transition: left .5s;
+}
+
+/*---------------------------------------------------------------*/
 
 .roomContainer {
 	position: fixed;
@@ -68,16 +112,8 @@ h1 {
 	font-size: 1em;
 }
 
-.main {
-	position: fixed;
-	top: 3.5em;
-	left: 0em;
-	width: 100%;
-	height: 100%;
-	padding: 0;
-	margin: 0;
-	transition: left .5s;
-}
+/*---------------------------------------------------------------*/
+
 
 .page1 {
 	left: 0%;
@@ -96,6 +132,8 @@ h1 {
 	background-color: black;
 }
 
+/*---------------------------------------------------------------*/
+
 .timeBar {
 	position: absolute;
 	top: 0em;
@@ -112,6 +150,8 @@ h1 {
 	text-align: center;
 	font-size: .8em;
 }	
+
+/*---------------------------------------------------------------*/
 
 .container {
 	margin-top: 1.05em; /*avoids timeBar and adds top border effect*/
@@ -170,6 +210,7 @@ h1 {
 	position: absolute;
 	top: .5em;
 	left: .5em;
+	right: 2.5em;
 }
 
 @media (orientation: landscape){
@@ -225,47 +266,104 @@ h1 {
 }
 }
 
-p {
-	font-size: .75em;
-	color: white;
-	margin: 0em;
-	border: 0px;
-	padding: 0em;
-}
-
-h2 {
-	font-size: 1em;
-	font-weight: bold;
-	padding-top: 0em;	
-	margin-top: 0em;
-}
-
-h3 {
-	color: white;
-	font-size: 1em;
-	font-weight: bold;
-	padding-top: 0em;	
-	margin-top: 0em;
-}
-
-ul {
-	color: white;
-}
+/*---------------------------------------------------------------*/
 
 .menu {
-	position: absolute;
-	top: 0;	
+	position: fixed;
+	top: 3.5em;	
 	left: -18em;
-	height: 100%;
+	height: 95%;
 	width: 18em;
+	padding-top: 10%;
+	margin: 0;
 	background-color: black;
 	transition: left .5s;
 }
 
-.open {
+.menuContainer {
+	position: fixed;
+	top: 3.5em;	
+	left: -18em;
+	height: 95%;
+	width: 19.5em;
+	margin: 0;
+	transition: left .5s;
+
+}
+
+@media (orientation: landscape) {
+	.menu {
+	position: fixed;
+	top: 3.5em;	
+	left: -18em;
+	height: 95%;
+	width: 18em;
+	padding-top: 1%;
+	margin: 0;
+	background-color: black;
+	transition: left .5s;
+}
+}
+
+@media (orientation: portrait) {
+	.menu {
+	position: fixed;
+	top: 3.5em;	
+	left: -18em;
+	height: 95%;
+	width: 18em;
+	padding-top: 10%;
+	margin: 0;
+	background-color: #1A1A1A;
+	transition: left .5s;
+}
+}
+
+.menuOpen {
 		left: 0em;
 }
 
-.closed {
+.menuClosed {
 		left: -18em;
 }
+
+.menuIcon {
+	height: 2em;
+	padding-right: 1em;
+	margin: 0;
+	display: inline;
+	vertical-align: middle;
+
+}
+
+.menuOptions {
+	display: inline;
+	font-weight: bold;
+	font-size: 1em;
+	color: whitesmoke;
+}
+
+.menuButtonOpen {
+	left: -1em;
+}
+
+.menuButtonClose {
+	left: -.5em;
+}
+
+ul {
+	height: 90%;
+	padding: 0;
+	margin-top: 0;
+	color: white;
+	list-style-type: none;
+}
+
+li {
+	height: 15%;
+	padding-top: 1em;
+	padding-left: 2em;
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
