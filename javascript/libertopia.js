@@ -1,5 +1,39 @@
 function init() {
 
+//menu buttons
+
+var menuOptionSchedule = document.getElementById("menuOptionSchedule");
+var menuOptionMySchedule = document.getElementById("menuOptionMySchedule");
+var menuOptionSpeakers = document.getElementById("menuOptionSpeakers");
+var menuOptionTalks = document.getElementById("menuOptionTalks");
+var menuOptionMap = document.getElementById("menuOptionMap");
+var menuOptionFeedback = document.getElementById("menuOptionFeedback");
+
+menuOptionSchedule.addEventListener('click', function() {
+	alert("you clicked the Schedule Option")
+	}, false);
+
+menuOptionMySchedule.addEventListener('click', function() {
+	alert("you clicked the My Schedule Option")
+	}, false);
+	
+menuOptionSpeakers.addEventListener('click', function() {
+	alert("you clicked the Speakers Option")
+	}, false);
+	
+menuOptionTalks.addEventListener('click', function() {
+	alert("you clicked the Talks Option")
+	}, false);
+	
+menuOptionMap.addEventListener('click', function() {
+	alert("you clicked the Map Option")
+	}, false);
+	
+menuOptionFeedback.addEventListener('click', function() {
+	alert("you clicked the Feedback Option")
+	}, false);
+
+
 //swipe to go forward/backward in schedule
 
 $( ".container" ).on( "swipeleft swiperight", "", swipeHandler);
