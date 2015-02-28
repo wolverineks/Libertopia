@@ -1,10 +1,10 @@
 function init() {
 
-//swipe test area /////////////////////////////
+//swipe to go forward/backward in schedule
 
-  $( ".container" ).on( "swipeleft swiperight", "", swipeHandler);
+$( ".container" ).on( "swipeleft swiperight", "", swipeHandler);
 
-  function swipeHandler( e ){
+function swipeHandler( e ){
   	if ( e.type === "swipeleft"  ) {
 		var main = document.getElementById("main");
 		main.setAttribute("class", "main page2");
@@ -16,30 +16,54 @@ function init() {
 	};
 };
 
+//functions to open/close menu and open/close menuButton
 
- $( ".roomContainer" ).on( "swipeleft swiperight", "", function( e ) {
-         if ( e.type === "swiperight"  ) {
-         	var menu = document.getElementById("menu");
-            menu.setAttribute("class", "menu open");
-         }
+function menuOpen () {
+	
+	var menu = document.getElementById("menu");
+	var menuContainer = document.getElementById("menuContainer");
+	var menuButton = document.getElementById("menuButton");
+	
+	menu.setAttribute("class", "menu menuOpen");
+	menuContainer.setAttribute("class", "menuContainer menuOpen");
+	menuButton.setAttribute("class", "menuButton menuButtonOpen");
+
+};
+
+function menuClose() {
+	
+	var menu = document.getElementById("menu");
+   var menuContainer = document.getElementById("menuContainer");
+	var menuButton = document.getElementById("menuButton");
+	
+   menu.setAttribute("class", "menu menuClose");
+   menuContainer.setAttribute("class", "menuContainer menuClose");
+	menuButton.setAttribute("class", "menuButton menuButtonClose");
+	
+};
+
+//swipe menuContainer to open/close menu
+
+ $( ".menuContainer" ).on( "swipeleft swiperight", "", function( e ) {
+         if ( e.type === "swiperight"  ) { 
+         	menuOpen();
+         } else if ( e.type === "swipeleft"  ) {
+         	menuClose();
+			}     
      });
-     
- $( ".menu" ).on( "swipeleft swiperight", "", function( e ) {
-         if ( e.type === "swipeleft"  ) {
-         	var menu = document.getElementById("menu");
-            menu.setAttribute("class", "menu closed");
-         }
-     });   
 
-//menu click
+//open/close menu when clicking on hamburger button
 
 var menuButton = document.getElementById("menuButton");
 
-	menuButton.addEventListener('click', function() {
-         	var menu = document.getElementById("menu");
-            menu.setAttribute("class", "menu open");
-         }, false);
-	
+menuButton.addEventListener('click', function() {
+	var menu = document.getElementById("menu");
+	if ( menu.getAttribute("class") === "menu menuOpen" ) {
+		menuClose();
+	} else if ( menu.getAttribute("class") === "menu menuClose" ) {
+		menuOpen();
+	};
+	}, false);
 
 //Select lecture for personalized schedule
 var favStar11 = document.getElementById("favStar11");
