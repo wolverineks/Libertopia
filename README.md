@@ -17,6 +17,7 @@ Planned Features:
     <li>Streaming Video</li>
     <li>IRC chat</li>
     <li>Reddit Style Chat with Speakers</li>
+    <li>Bluetooth beacon support<li>
   </ul>
   
   backend:
