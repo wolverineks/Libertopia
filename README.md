@@ -28,6 +28,8 @@ Planned Features:
  
 <dl> 
   <dh>Changelog:</dh>
+    <dt>ver. 0.3</dt>
+      <dd>Added multiple panels, hamburger/sideSwipe menu, feedback questions.</dd>
     <dt>ver. 0.2</dt>
       <dd>Master Schedule contains 2 pages, swiping between pages, changing "favorites stars".</dd>
     <dt>ver. 0.1</dt>
