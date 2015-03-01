@@ -12,7 +12,7 @@ Planned Features:
     <li>Personalized Schedule</li>
     <li>Talk Descriptions</li>
     <li>Speaker Profiles</li>
-    <li>Search Talks/Speakers<li>
+    <li>Search Talks/Speakers</li>
     <li>Location Map</li>
     <li>Submit Feedback</li>
     <li>Streaming Video</li>
