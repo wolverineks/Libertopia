@@ -1,5 +1,79 @@
 function init() {
 
+"use strict";
+
+//fadeIn() and fadeOut() hidePanel() functions
+
+function fadeHidePanels( whichPanelStaysOpen ) {
+
+	if ( whichPanelStaysOpen !== schedule ) {
+//		document.getElementById("schedule").setAttribute("class", "panel fadeOut");
+		document.getElementById("schedule").setAttribute("class", "panel hidden");		
+	};
+	
+	if ( whichPanelStaysOpen !== mySchedule ) {
+//		document.getElementById("mySchedule").setAttribute("class", "panel fadeOut");
+		document.getElementById("mySchedule").setAttribute("class", "panel hidden");			
+	};
+	
+	if ( whichPanelStaysOpen !== speakers ) {
+//		document.getElementById("speakers").setAttribute("class", "panel fadeOut");
+		document.getElementById("speakers").setAttribute("class", "panel hidden");		
+	};
+	
+	if ( whichPanelStaysOpen !== talks ) {
+//		document.getElementById("talks").setAttribute("class", "panel fadeOut");
+		document.getElementById("talks").setAttribute("class", "panel hidden");		
+	};
+	
+	if ( whichPanelStaysOpen !== map ) {
+//		document.getElementById("map").setAttribute("class", "panel fadeOut");
+		document.getElementById("map").setAttribute("class", "panel hidden");	
+	};
+	
+	if ( whichPanelStaysOpen !== feedback ) {
+//		document.getElementById("feedback").setAttribute("class", "panel fadeOut");
+		document.getElementById("feedback").setAttribute("class", "panel hidden");		
+	};
+		
+};
+
+//show panel function
+
+function showPanel( whichPanelFadesIn ) {
+	
+	if ( whichPanelFadesIn === "schedule" ) {
+//		document.getElementById("schedule").setAttribute("class", "panel fadeOut");
+		document.getElementById("schedule").setAttribute("class", "panel fadeIn")		
+	};
+	
+	if ( whichPanelFadesIn === "mySchedule" ) {
+//		document.getElementById("mySchedule").setAttribute("class", "panel fadeOut");
+		document.getElementById("mySchedule").setAttribute("class", "panel fadeIn");			
+	};
+	
+	if ( whichPanelFadesIn === "speakers" ) {
+//		document.getElementById("speakers").setAttribute("class", "panel fadeOut");
+		document.getElementById("speakers").setAttribute("class", "panel fadeIn");		
+	};
+	
+	if ( whichPanelFadesIn === "talks" ) {
+//		document.getElementById("talks").setAttribute("class", "panel fadeOut");
+		document.getElementById("talks").setAttribute("class", "panel fadeIn");		
+	};
+	
+	if ( whichPanelFadesIn === "map" ) {
+//		document.getElementById("map").setAttribute("class", "panel fadeOut");
+		document.getElementById("map").setAttribute("class", "panel fadeIn");	
+	};
+	
+	if ( whichPanelFadesIn === "feedback" ) {
+//		document.getElementById("feedback").setAttribute("class", "panel fadeOut");
+		document.getElementById("feedback").setAttribute("class", "panel fadeIn");		
+	};
+	
+};
+
 //menu buttons
 
 var menuOptionSchedule = document.getElementById("menuOptionSchedule");
@@ -12,75 +86,43 @@ var menuOptionFeedback = document.getElementById("menuOptionFeedback");
 menuOptionSchedule.addEventListener('click', function() {
 	document.getElementById('pageTitle').innerHTML = 'SCHEDULE';
 	menuClose();
-//	document.getElementsByClassName("panel").setAttribute("class", "panel fadeOut");
-	document.getElementById("mySchedule").setAttribute("class", "panel fadeOut");	
-	document.getElementById("speakers").setAttribute("class", "panel fadeOut");	
-	document.getElementById("talks").setAttribute("class", "panel fadeOut");	
-	document.getElementById("map").setAttribute("class", "panel fadeOut");	
-	document.getElementById("feedback").setAttribute("class", "panel fadeOut");	
-	document.getElementById("schedule").setAttribute("class", "panel fadeIn");
+	fadeHidePanels( "schedule" ); //every panel except this parameter will fade out and hide
+	showPanel( "schedule" );
 	}, false);
 
 menuOptionMySchedule.addEventListener('click', function() {
 	document.getElementById('pageTitle').innerHTML = 'MY SCHEDULE';
 	menuClose();
-//	document.getElementsByClassName("panel").setAttribute("class", "panel fadeOut");
-	document.getElementById("schedule").setAttribute("class", "panel fadeOut");
-	document.getElementById("speakers").setAttribute("class", "panel fadeOut");
-	document.getElementById("talks").setAttribute("class", "panel fadeOut");
-	document.getElementById("map").setAttribute("class", "panel fadeOut");
-	document.getElementById("feedback").setAttribute("class", "panel fadeOut");
-	document.getElementById("mySchedule").setAttribute("class", "panel fadeIn");
+	fadeHidePanels( "mySchedule" ); //every panel except this parameter will fade out and hide
+	showPanel( "mySchedule" );	
 	}, false);
 	
 menuOptionSpeakers.addEventListener('click', function() {
 	document.getElementById('pageTitle').innerHTML = 'SPEAKERS';
 	menuClose();
-//	document.getElementsByClassName("panel").setAttribute("class", "panel fadeOut");
-	document.getElementById("schedule").setAttribute("class", "panel fadeOut");
-	document.getElementById("mySchedule").setAttribute("class", "panel fadeIn");
-	document.getElementById("talks").setAttribute("class", "panel fadeIn");
-	document.getElementById("map").setAttribute("class", "panel fadeIn");
-	document.getElementById("feedback").setAttribute("class", "panel fadeIn");
-	document.getElementById("speakers").setAttribute("class", "panel fadeIn");
+	fadeHidePanels( "speakers" ); //every panel except this parameter will fade out and hide
+	showPanel( "speakers" );		
 	}, false);
 	
 menuOptionTalks.addEventListener('click', function() {
 	document.getElementById('pageTitle').innerHTML = 'TALKS';
 	menuClose();
-//	document.getElementsByClassName("panel").setAttribute("class", "panel fadeOut");
-	document.getElementById("schedule").setAttribute("class", "panel fadeOut");
-	document.getElementById("mySchedule").setAttribute("class", "panel fadeOut");
-	document.getElementById("speakers").setAttribute("class", "panel fadeOut");
-	document.getElementById("map").setAttribute("class", "panel fadeOut");
-	document.getElementById("feedback").setAttribute("class", "panel fadeOut");
-	document.getElementById("talks").setAttribute("class", "panel fadeIn");
+	fadeHidePanels( "talks" ); //every panel except this parameter will fade out and hide
+	showPanel( "talks" );		
 	}, false);
 	
 menuOptionMap.addEventListener('click', function() {
 	document.getElementById('pageTitle').innerHTML = 'MAP';
 	menuClose();
-//	document.getElementsByClassName("panel").setAttribute("class", "panel fadeOut");
-	document.getElementById("schedule").setAttribute("class", "panel fadeOut");
-	document.getElementById("mySchedule").setAttribute("class", "panel fadeOut");
-	document.getElementById("speakers").setAttribute("class", "panel fadeOut");
-	document.getElementById("talks").setAttribute("class", "panel fadeOut");
-	document.getElementById("feedback").setAttribute("class", "panel fadeOut");
-	document.getElementById("map").setAttribute("class", "panel fadeIn");
-	
+	fadeHidePanels( "map" ); //every panel except this parameter will fade out and hide
+	showPanel( "map" );		
 	}, false);
 	
 menuOptionFeedback.addEventListener('click', function() {
 	document.getElementById('pageTitle').innerHTML = 'FEEDBACK';
 	menuClose();
-//	document.getElementsByClassName("panel").setAttribute("class", "panel fadeOut");
-	document.getElementById("schedule").setAttribute("class", "panel fadeOut");
-	document.getElementById("mySchedule").setAttribute("class", "panel fadeOut");
-	document.getElementById("speakers").setAttribute("class", "panel fadeOut");
-	document.getElementById("talks").setAttribute("class", "panel fadeOut");
-	document.getElementById("map").setAttribute("class", "panel fadeOut");
-	document.getElementById("feedback").setAttribute("class", "panel fadeIn");
-
+	fadeHidePanels( "feedback" ); //every panel except this parameter will fade out and hide
+	showPanel( "feedback" );		
 	}, false);
 
 
@@ -227,4 +269,5 @@ var favStar24 = document.getElementById("favStar24");
 	}, false);
 	
 };
+
 window.onload = init;
