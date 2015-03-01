@@ -33,7 +33,7 @@
 
 </div>
 
-<div class="panel" id="schedule">
+<div class="panel page1" id="schedule">
 
 	<div class="talkBoxContainer" id="talkBoxContainer2">
 
@@ -240,6 +240,8 @@
 		
 </div>
 
+
+	
 <div class="panel hidden" id="mySchedule">
 
 	<div id="day3">
@@ -316,21 +318,78 @@
 </div>
 	
 <div class="panel hidden" id="speakers">
-
+	<div class="subHeader">
+	</div>
 </div>
 
 <div class="panel hidden" id="talks">
-
+	<div class="subHeader">
+	</div>
 </div>
 
 <div class="panel hidden" id="map">
-
+	<div class="subHeader">
+	</div>
 </div>
 
 <div class="panel hidden" id="feedback">
-
+	<form>
+		<dl>
+				<dt>
+					<h1>Libertopia Conference Overall:</h1>					
+				</dt>
+					<dd>
+						<div class="slider">
+						</div>
+						<input class="slider" id="conferenceSlider" type="range" min="0" max="100" step="5"/>		
+					</dd>		
+				
+				<dt>
+					<h2>Comments:</h2>				
+				</dt>
+					<dd>
+						<textarea id="conventionComment" placeholder="My favorite thing about Libertopia this year was..."></textarea>
+					</dd>
+					
+				<dt>
+					<h1>Speaker Selection:</h1>					
+				</dt>
+					<dd>
+						<div class="slider">
+						</div>
+						<input type="range" class="slider" id="speakerSelectionSlider" min="0" max="100" step="5"/>		
+					</dd>		
+				<dt>
+					<h2>Comments:</h2>				
+				</dt>
+					<dd>
+						<textarea id="speakerSelectionComment" placeholder="My thoughts about the speaker selection..."></textarea>
+					</dd>	
+					
+				<dt>
+					<h1>Venue:</h1>					
+				</dt>
+					<dd>
+						<div class="slider">
+						</div>
+						<input type="range" class="slider" id="venueSelectionSlider" min="0" max="100" step="5"/>		
+					</dd>		
+				<dt>
+					<h2>Comments:</h2>				
+				</dt>
+					<dd>
+						<textarea id="venueSelectionComment" placeholder="My thoughts about the venue selection..."></textarea>
+					</dd>	
+					
+		</dl>
+			
+		<input type="submit" class="submitButton" value="Submit">
+			
+	</form>
 </div>
 	
+
+
 <div class="menuContainer" id="menuContainer">
 
 	<div class="menu menuClose" id="menu">
@@ -338,42 +397,43 @@
 			<li id="menuOptionSchedule">
 				<div class="li">
 					<img src="images/schedule.png" alt="Schedule" class="menuIcon">
-					<p class="menuOptions">Schedule</p>
+					<p class="menuOptions">SCHEDULE</p>
 				</div>
 			</li>		
 			<li id="menuOptionMySchedule">
 				<div class="li">
 					<img src="images/mySchedule.png" alt="My Schedule" class="menuIcon">				
-					<p class="menuOptions">My Schedule</p>
+					<p class="menuOptions">MY SCHEDULE</p>
 				</div>
 			</li>		
 			<li id="menuOptionSpeakers">
 				<div class="li">
 					<img src="images/speakers.png" alt="Speakers" class="menuIcon">
-					<p class="menuOptions">Speakers</p>
+					<p class="menuOptions">SPEAKERS</p>
 				</div>
 			</li>		
 			<li id="menuOptionTalks">
 				<div class="li" id="menuOptionTalks">
 					<img src="images/talks.png" alt="Talks" class="menuIcon">
-					<p class="menuOptions">Talks</p>
+					<p class="menuOptions">TALKS</p>
 				</div>
 			</li>		
 			<li id="menuOptionMap">
 				<div class="li">
 					<img src="images/map.png" alt="Map" class="menuIcon">
-					<p class="menuOptions">Map</p>
+					<p class="menuOptions">MAP</p>
 				</div>
 			</li>
 			<li id="menuOptionFeedback">
 				<div class="li">
 					<img src="images/feedback.png" alt="Feedback" class="menuIcon">
-					<p class="menuOptions">Feedback</p>
+					<p class="menuOptions">FEEDBACK</p>
 				</div>
 			</li>		
 		</ul>	
 	</div>
 </div>
+
 	
 <script src="javascript/jquery-1.11.2.min.js"></script>
 <script src="javascript/jquery.mobile.custom.min.js"></script>
