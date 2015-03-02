@@ -6,32 +6,27 @@ function init() {
 
 function fadeHidePanels( whichPanelStaysOpen ) {
 
-	if ( whichPanelStaysOpen !== schedule ) {
+	if ( whichPanelStaysOpen !== "schedule" ) {
 //		document.getElementById("schedule").setAttribute("class", "panel fadeOut");
 		document.getElementById("schedule").setAttribute("class", "panel hidden");		
 	};
 	
-	if ( whichPanelStaysOpen !== mySchedule ) {
+	if ( whichPanelStaysOpen !== "mySchedule" ) {
 //		document.getElementById("mySchedule").setAttribute("class", "panel fadeOut");
 		document.getElementById("mySchedule").setAttribute("class", "panel hidden");			
 	};
 	
-	if ( whichPanelStaysOpen !== speakers ) {
-//		document.getElementById("speakers").setAttribute("class", "panel fadeOut");
-		document.getElementById("speakers").setAttribute("class", "panel hidden");		
+	if ( whichPanelStaysOpen !== "search" ) {
+//		document.getElementById("search").setAttribute("class", "panel fadeOut");
+		document.getElementById("search").setAttribute("class", "panel hidden");		
 	};
 	
-	if ( whichPanelStaysOpen !== talks ) {
-//		document.getElementById("talks").setAttribute("class", "panel fadeOut");
-		document.getElementById("talks").setAttribute("class", "panel hidden");		
-	};
-	
-	if ( whichPanelStaysOpen !== map ) {
+	if ( whichPanelStaysOpen !== "map" ) {
 //		document.getElementById("map").setAttribute("class", "panel fadeOut");
 		document.getElementById("map").setAttribute("class", "panel hidden");	
 	};
 	
-	if ( whichPanelStaysOpen !== feedback ) {
+	if ( whichPanelStaysOpen !== "feedback" ) {
 //		document.getElementById("feedback").setAttribute("class", "panel fadeOut");
 		document.getElementById("feedback").setAttribute("class", "panel hidden");		
 	};
@@ -52,14 +47,9 @@ function showPanel( whichPanelFadesIn ) {
 		document.getElementById("mySchedule").setAttribute("class", "panel fadeIn");			
 	};
 	
-	if ( whichPanelFadesIn === "speakers" ) {
-//		document.getElementById("speakers").setAttribute("class", "panel fadeOut");
-		document.getElementById("speakers").setAttribute("class", "panel fadeIn");		
-	};
-	
-	if ( whichPanelFadesIn === "talks" ) {
-//		document.getElementById("talks").setAttribute("class", "panel fadeOut");
-		document.getElementById("talks").setAttribute("class", "panel fadeIn");		
+	if ( whichPanelFadesIn === "search" ) {
+//		document.getElementById("search").setAttribute("class", "panel fadeOut");
+		document.getElementById("search").setAttribute("class", "panel fadeIn");		
 	};
 	
 	if ( whichPanelFadesIn === "map" ) {
@@ -78,8 +68,7 @@ function showPanel( whichPanelFadesIn ) {
 
 var menuOptionSchedule = document.getElementById("menuOptionSchedule");
 var menuOptionMySchedule = document.getElementById("menuOptionMySchedule");
-var menuOptionSpeakers = document.getElementById("menuOptionSpeakers");
-var menuOptionTalks = document.getElementById("menuOptionTalks");
+var menuOptionearch = document.getElementById("menuOptionSearch");
 var menuOptionMap = document.getElementById("menuOptionMap");
 var menuOptionFeedback = document.getElementById("menuOptionFeedback");
 
@@ -97,18 +86,11 @@ menuOptionMySchedule.addEventListener('click', function() {
 	showPanel( "mySchedule" );	
 	}, false);
 	
-menuOptionSpeakers.addEventListener('click', function() {
-	document.getElementById('pageTitle').innerHTML = 'SPEAKERS';
+menuOptionSearch.addEventListener('click', function() {
+	document.getElementById('pageTitle').innerHTML = 'SEARCH';
 	menuClose();
-	fadeHidePanels( "speakers" ); //every panel except this parameter will fade out and hide
-	showPanel( "speakers" );		
-	}, false);
-	
-menuOptionTalks.addEventListener('click', function() {
-	document.getElementById('pageTitle').innerHTML = 'TALKS';
-	menuClose();
-	fadeHidePanels( "talks" ); //every panel except this parameter will fade out and hide
-	showPanel( "talks" );		
+	fadeHidePanels( "search" ); //every panel except this parameter will fade out and hide
+	showPanel( "search" );		
 	}, false);
 	
 menuOptionMap.addEventListener('click', function() {
@@ -126,6 +108,12 @@ menuOptionFeedback.addEventListener('click', function() {
 	}, false);
 
 
+
+var options = {
+  valueNames: [ 'name' ]
+};
+
+var userList = new List('users', options);
 
 
 //swipe to go forward/backward in schedule
