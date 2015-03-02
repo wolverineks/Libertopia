@@ -11,6 +11,8 @@
 
 <link rel="stylesheet" href="css/libertopia.css" />
 
+<link rel="stylesheet" href="listTest.css" />
+
 <link rel="shortcut icon" href="/favicon.ico" />
 
 </head>
@@ -317,14 +319,38 @@
 	
 </div>
 	
-<div class="panel hidden" id="speakers">
-	<div class="subHeader">
-	</div>
+<div class="panel hidden" id="search">
+
+<div id="users">
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+
+  <ul class="list">
+    <li>
+      <h3 class="name">Jeffrey Tucker</h3>
+      <p class="born">Welcome Address</p>
+    </li>
+    <li>
+      <h3 class="name">John Durso</h3>
+      <p class="born">Peaceful Parenting</p>
+    </li>
+    <li>
+      <h3 class="name">Ernest Hancock</h3>
+      <p class="born">Independent Living</p>
+    </li>
+    <li>
+      <h3 class="name">Stefan Molyneux</h3>
+      <p class="born">Conference Review</p>
+    </li>
+  </ul>
+
 </div>
 
-<div class="panel hidden" id="talks">
-	<div class="subHeader">
-	</div>
+
+
+
 </div>
 
 <div class="panel hidden" id="map">
@@ -336,7 +362,7 @@
 	<form>
 		<dl>
 				<dt>
-					<h1>Libertopia Conference Overall:</h1>					
+					<h1>Overall Experience:</h1>					
 				</dt>
 					<dd>
 						<div class="slider">
@@ -406,18 +432,12 @@
 					<p class="menuOptions">MY SCHEDULE</p>
 				</div>
 			</li>		
-			<li id="menuOptionSpeakers">
+			<li id="menuOptionSearch">
 				<div class="li">
-					<img src="images/speakers.png" alt="Speakers" class="menuIcon">
-					<p class="menuOptions">SPEAKERS</p>
+					<img src="images/search.png" alt="Search" class="menuIcon">
+					<p class="menuOptions">SEARCH</p>
 				</div>
-			</li>		
-			<li id="menuOptionTalks">
-				<div class="li" id="menuOptionTalks">
-					<img src="images/talks.png" alt="Talks" class="menuIcon">
-					<p class="menuOptions">TALKS</p>
-				</div>
-			</li>		
+			</li>				
 			<li id="menuOptionMap">
 				<div class="li">
 					<img src="images/map.png" alt="Map" class="menuIcon">
@@ -434,7 +454,7 @@
 	</div>
 </div>
 
-	
+<script src="javascript/list.js"></script>
 <script src="javascript/jquery-1.11.2.min.js"></script>
 <script src="javascript/jquery.mobile.custom.min.js"></script>
 <script src="javascript/libertopia.js"></script>
