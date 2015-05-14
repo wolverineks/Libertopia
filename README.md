@@ -1,4 +1,6 @@
 # Libertopia
+
+[![Join the chat at https://gitter.im/wolverineks/Libertopia](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/wolverineks/Libertopia?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Libertopia Festival (San Diego, CA)
 
 This is a schedule web app for Libertopia 2015.
